@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@fidm/x509": "^1.2.1",
+    "base45-js": "^1.0.1",
+    "buffer": "^6.0.3",
+    "cbor": "^7.0.5",
+    "cose-js": "^0.6.0",
+    "pako": "^2.0.3",
+    "sha256-uint8array": "^0.10.1"
+  }
+}
