@@ -27,12 +27,32 @@ into any exclusion made in GDPR Art 9(2) without some mental gymnastics.
 
 ## Project structure
 
+`vuejs-example` contains the full web-based QR code scanner. Requires a
+webcam and a QR code.
+
 `lib.mjs` contains the decoding, reading and parsing parts.
 
 `certificates.mjs` contains a static dump of the current issued and
 allowed signers. See the comments on how and where to get them.
 
 `example.mjs` is my test on my valid certificate.
+
+## Run the vue.js based prototype
+
+```bash
+cd vuejs-example
+yarn install
+yarn run serve
+```
+
+and visit http://localhost:8080 to scan codes with an attached webcam.
+
+## Run locally with node
+
+Just put a valid LIVE QR code content into the `qrCode` variable inside
+`example.mjs`.
+
+This does not work with staging certificates.
 
 ## Covert QR to string on shell
 
@@ -47,12 +67,6 @@ zbarimg "code.jpg"
 to extract a valid payload from it. Put the result into the `qrCode`
 variable you can find in `example.mjs` for a test run.
 
-## Run locally with node
-
-Just put a valid LIVE QR code content into the `qrCode` variable inside
-`example.mjs`.
-
-This does not work with staging certificates.
 
 ```bash
 yarn install
