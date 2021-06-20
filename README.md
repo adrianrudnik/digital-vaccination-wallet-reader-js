@@ -54,20 +54,6 @@ Just put a valid LIVE QR code content into the `qrCode` variable inside
 
 This does not work with staging certificates.
 
-## Covert QR to string on shell
-
-I save the screenshot of the output from CovPass or Corona Warn App into
-a JPG and do this on linux:
-
-```bash
-sudo apt-get install zbar-tools
-zbarimg "code.jpg"
-```
-
-to extract a valid payload from it. Put the result into the `qrCode`
-variable you can find in `example.mjs` for a test run.
-
-
 ```bash
 yarn install
 node example.mjs
@@ -101,6 +87,19 @@ Output will be something like this:
 
 This is just an example, and it does not read all available information
 from it. Just parts to illustrate on how to.
+
+## Covert QR to string on shell
+
+I save the screenshot of the output from CovPass or Corona Warn App into
+a JPG and do this on linux:
+
+```bash
+sudo apt-get install zbar-tools
+zbarimg "code.jpg"
+```
+
+to extract a valid payload from it. Put the result into the `qrCode`
+variable you can find in `example.mjs` for a test run.
 
 ## Why not build a clean lib?
 
