@@ -1,8 +1,10 @@
-# QR-Code payload decoder of the digital vaccination passport as issued by the European eHealth network
+# QR code payload reader and validator for the digital vaccination passport
 
 This is a simple study on how to validate the QR codes flying
 around in peoples pockets with a client side browser instance for
 various reasons.
+
+Works on certificates currently issued by the European eHealth network.
 
 JavaScript is not my daily driver, so do not expect super shiny code.
 
@@ -10,13 +12,18 @@ I used this repo to research a possible integration of the german
 Digitaler Impfpass to an already existing QR code reader based
 entry control solution.
 
-I aborted the attempt as the pass contains more information than needed,
-like full personal details AND medical information about what happened
-with the mentioned person. This should not be part of consumer apps,
-distributed on consumer ways without any audit log or even access log,
-but that's just my personal opinion. Just forcing stuff offline should
-not free people from the responsibility to care about the issued
-information, and it's possible malicious collection or processing.
+Not sure you want to use this in a commercial solution. The payload
+contains special category data as defined by the GDPR Art 9(1). The
+user has no way to "consent" to the access, there is no protection like
+a simple access PIN or other safeguard. The wallet can also contain
+certificates about other persons, not only the owner itself, which is
+even worse.
+
+The goal was to do all this in a client browser instance and only pass
+the "abstract" result back to the backend. But processing is a very
+broad term and does not differ between client and server side, as far
+as I understand it. I could also not identify a clean way to fit this
+into any exclusion made in GDPR Art 9(2) without some mental gymnastics.
 
 ## Project structure
 
