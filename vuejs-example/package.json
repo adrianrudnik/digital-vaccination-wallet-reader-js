@@ -12,6 +12,7 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@fidm/x509": "^1.2.1",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -26,7 +27,6 @@
     "node-inspect-extracted": "^1.0.7",
     "pako": "^2.0.3",
     "sha256-uint8array": "^0.10.1",
-    "vue-qrcode-reader": "^3.0.3",
     "vue3-qrcode-reader": "^0.0.1"
   },
   "eslintConfig": {
